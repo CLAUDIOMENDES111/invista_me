@@ -12,3 +12,11 @@ def investimentos(request):
         'dados': Investimento.objects.all
     }
     return render(request, 'investimentos/investimentos.html', context=dados )
+
+def detalhe(request, id_investimento):
+    dados = {
+            'dados': Investimento.objects.get(pk=id_investimento)
+            
+         
+    }
+    return render(request,'investimentos/detalhe.html', dados)

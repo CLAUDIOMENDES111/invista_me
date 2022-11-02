@@ -5,9 +5,11 @@ from django.shortcuts import HttpResponse
 
 
 def pagina_inicial(request):
-    return HttpResponse('Agora vai!')
+    return HttpResponse('VOU CONSEGUIR!')
 
 
 def contato(request):
-    return HttpResponse('Nosso telefone é 6199651-1980')
+    return HttpResponse('Nosso telefone é XX XXXXXXXXXXX')
 
+def minha_historia(request):
+    return render(request, 'investimentos/minha_historia.html' )

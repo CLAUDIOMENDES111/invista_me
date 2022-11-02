@@ -12,4 +12,10 @@ def contato(request):
     return HttpResponse('Nosso telefone é XX XXXXXXXXXXX')
 
 def minha_historia(request):
-    return render(request, 'investimentos/minha_historia.html' )
+    pessoa = {
+        'nome': 'Cláudio',
+        'idade': 42,
+        'profissao': 'professor'
+
+    }
+    return render(request, 'investimentos/minha_historia.html', pessoa )

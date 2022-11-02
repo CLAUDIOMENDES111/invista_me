@@ -8,14 +8,11 @@ def pagina_inicial(request):
     return HttpResponse('VOU CONSEGUIR!')
 
 
-def contato(request):
-    return HttpResponse('Nosso telefone é XX XXXXXXXXXXX')
+def novo_investimento(request):
+    return render(request, 'investimentos/novo_investimento.html')
 
-def minha_historia(request):
-    pessoa = {
-        'nome': 'Cláudio',
-        'idade': 42,
-        'profissao': 'professor'
-
+def investimento_registrado(request):
+    investimento ={
+        'tipo_investimento':request.POST.get('TipoInvestimento')
     }
-    return render(request, 'investimentos/minha_historia.html', pessoa )
+    return render(request, 'investimentos/investimento_registrado.html', investimento)

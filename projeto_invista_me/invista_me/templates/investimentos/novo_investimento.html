@@ -1,6 +1,12 @@
+{% extends 'investimentos/base.html'   %}
+{% block conteudo  %}
 <form action = "" method="POST">
     {% csrf_token %}
-    <h1> Formulário Novo Investimento </h1>
+    <h1 style="text-align:center;"> Formulário Novo Investimento </h1>
     {{formulario}}
     <button type="submit" class="btn btn-success"> Salvar</button>
 </form>
+{% endblock %}
+
+
+

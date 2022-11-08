@@ -38,8 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'invista_me',
-    'crispy_forms'
-    
+    'crispy_forms',
+    'usuarios'   
     
 ]
 
